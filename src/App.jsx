@@ -1,9 +1,13 @@
+import { Provider } from "react-redux"
 import Body from "./Body"
 import Login from "./Login"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import store from "./utils/store"
+
 function App() {
   return (
     <>
+      <Provider store={store}>
       <BrowserRouter basename='/'>
         <Routes>
             <Route path="/" element={<Body/>}>
@@ -11,6 +15,7 @@ function App() {
             </Route>
         </Routes>
       </BrowserRouter> 
+      </Provider>
     </>
   )
 }
