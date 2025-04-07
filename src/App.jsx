@@ -1,6 +1,6 @@
 import { Provider } from "react-redux"
-import Body from "./Body"
-import Login from "./Login"
+import Body from "./components/Body"
+import Login from "./components/Login"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import store from "./utils/store"
 
