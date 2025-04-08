@@ -3,6 +3,7 @@ import Body from "./components/Body"
 import Login from "./components/Login"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import store from "./utils/store"
+import Profile from "./components/Profile"
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Body/>}>
               <Route path="/login" element={<Login/>}></Route>
+              <Route path="/profile" element={<Profile/>}></Route>
             </Route>
         </Routes>
       </BrowserRouter> 
