@@ -1,11 +1,9 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import store from '../utils/store'
 import axios from 'axios'
 import { BASE_URL } from '../utils/constants'
 import { Link, useNavigate } from 'react-router-dom'
 import { removeUser } from '../utils/UserSlice'
-import Profile from './Profile'
 
 const NavBar = () => {
   const user=useSelector((store)=>store.user)
@@ -18,7 +16,7 @@ const NavBar = () => {
       })
       dispatch(removeUser())
       navigate("/login")
-    }catch(err){``
+    }catch(err){
       console.log(err.mesaage)
     }
       
@@ -26,7 +24,7 @@ const NavBar = () => {
   return (
     <div className="navbar bg-base-200 shadow-sm">
     <div className="flex-1">
-      <a className="btn btn-ghost text-xl">DevHub🧑‍💻</a>
+      <Link to="/feed" className="btn btn-ghost text-xl">DevHub🧑‍💻</Link>
     </div>
     {user &&
     <div className="flex gap-2">
